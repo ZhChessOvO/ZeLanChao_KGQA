@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>泽兰抄-登录页</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="/static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/static/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/static/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="/static/css/aos.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <!-- Custom fonts for this template-->
+    <link href="/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+            href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+            rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="/static/css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+<div class="site-wrap" id="home-section">
+
+    <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+                <span class="icon-close2 js-menu-toggle"></span>
+            </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div>
+
+
+    <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+
+        <div class="container">
+            <div class="row align-items-center position-relative">
+
+
+                <div class="site-logo">
+                    <a href="/index" class="text-black"><span class="text-primary">泽兰抄</span></a>
+                </div>
+
+                <div class="col-12">
+                    <nav class="site-navigation text-right ml-auto " role="navigation">
+
+                        {#                        导航栏右侧#}
+                        <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+                            <li><a href="/index" class="nav-link">返回首页</a></li>
+                            {#                            <li><a href="index.html#services-section" class="nav-link">Services</a></li>#}
+                            {##}
+                            {##}
+                            {#                            <li>#}
+                            {#                                <a href="index.html#about-section" class="nav-link">About Us</a>#}
+                            {##}
+                            {#                            </li>#}
+                            {##}
+                            {#                            <li><a href="index.html#why-us-section" class="nav-link">Why Us</a></li>#}
+                            {##}
+                            {#                            <li><a href="index.html#testimonials-section" class="nav-link">Testimonials</a></li>#}
+                            {#                            <li><a href="index.html#blog-section" class="nav-link">Blog</a></li>#}
+                            {#                            <li><a href="index.html#contact-section" class="nav-link">Contact</a></li>#}
+                        </ul>
+                    </nav>
+
+                </div>
+
+                <div class="toggle-button d-inline-block d-lg-none"><a href="#"
+                                                                       class="site-menu-toggle py-5 js-menu-toggle text-black"><span
+                        class="icon-menu h3"></span></a></div>
+
+            </div>
+        </div>
+
+    </header>
+
+    <div class="site-section-cover overlay inner-page bg-light"
+         style="background-image: url('/static/images/medicine1.jpg')" data-aos="fade">
+
+        <div class="container">
+            <div class="row align-items-center justify-content-center text-center">
+                <div class="col-lg-10">
+
+                    <div class="box-shadow-content">
+                        <div class="block-heading-1">
+                            <span class="d-block mb-3 text-white" data-aos="fade-up">登录您的账号以获取更多个性化服务</span>
+                            <h1 class="mb-4" data-aos="fade-up" data-aos-delay="100">登录/注册</h1>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="site-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 blog-content">
+
+
+                    <!-- Nested Row within Card Body -->
+                    <div class="row">
+                        <div class="col-lg-12 d-none d-lg-block bg-login-image"></div>
+                        <div class="col-lg-12">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <h1 class="h4 text-gray-900 mb-4">欢迎回来！</h1>
+                                </div>
+                                <form class="user" method="POST">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <input type="email" class="form-control form-control-user"
+                                               name="email" aria-describedby="emailHelp"
+                                               placeholder="请输入您的邮箱...">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control form-control-user"
+                                               name="password" placeholder="请输入密码...">
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="custom-control custom-checkbox small">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck">
+                                            <label class="custom-control-label" for="customCheck">下次自动登录</label>
+                                        </div>
+                                    </div>
+                                    <p><img src="/static/images/medicine1.jpg" alt="Image" class="img-fluid"></p>
+                                    <button class="btn btn-primary btn-user btn-block" type="submit">
+                                        登录
+                                    </button>
+                                    <button class="btn btn-primary btn-user btn-block" type="reset">
+                                        重置
+                                    </button>
+
+                                    {% if messages %}
+                                        <script>
+                                            {% for msg in messages %}
+                                                alert('{{ msg.message }}');
+                                            {% endfor %}
+                                        </script>
+                                    {% endif %}
+
+                                </form>
+                                <hr>
+{#                                <div class="text-center">#}
+{#                                    <a class="small" href="">忘记密码?</a>#}
+{#                                </div>#}
+                                <div class="text-center" >
+                                    <a class="small" href="/register">注册账号!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-md-3 sidebar">
+                    {#                    <div class="sidebar-box">#}
+                    {#                        <form action="#" class="search-form">#}
+                    {#                            <div class="form-group">#}
+                    {#                                <span class="icon fa fa-search"></span>#}
+                    {#                                <input type="text" class="form-control" placeholder="输入你想搜索的内容...">#}
+                    {#                            </div>#}
+                    {#                        </form>#}
+                    {#                    </div>#}
+                    <div class="sidebar-box">
+                        <div class="categories">
+                            <h3>功能跳转</h3>
+                            <li><a href="/index">→图谱检索</a></li>
+                            <li><a href="/qs">→智能问答</a></li>
+                            <li><a href="#">→为您推荐</a></li>
+                            <li><a href="/passageindex">→健康百科</a></li>
+{#                            <li><a href="#">→文献查阅</a></li>#}
+{#                            <li><a href="#">→疾病自诊</a></li>#}
+{#                            <li><a href="#">→热门问答</a></li>#}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {#底部黑块#}
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <h2 class="footer-heading mb-4">关于我们</h2>
+                            <p>
+                                我们是来自北京林业大学的开发团队！团队成员有曹泽昊，张谦，张家缘。希望我们的“泽兰抄”可以给您带来帮助。如有需要，可以通过上边的“联系我们”或者直接向2561360151@qq.com给我们发送邮件哦！</p>
+                        </div>
+                        {#                        <div class="col-md-4 ml-auto">#}
+                        {#                            <h2 class="footer-heading mb-4">友情链接</h2>#}
+                        {#                            <ul class="list-unstyled">#}
+                        {#                                <li><a href="#">寻医问药网站</a></li>#}
+                        {#                                <li><a href="#">网站A1</a></li>#}
+                        {#                                <li><a href="#">网站A2</a></li>#}
+                        {#                                <li><a href="#">网站A3</a></li>#}
+                        {#                                <li><a href="#">网站A4</a></li>#}
+                        {#                            </ul>#}
+                        {#                        </div>#}
+
+                    </div>
+                </div>
+                <div class="col-md-4 ml-auto">
+
+                    <form action="#" method="post" class="footer-suscribe-form">
+                        <div class="mb-5">
+                            <h2 class="footer-heading mb-4">订阅我们的更新！</h2>
+
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control border-secondary text-white bg-transparent"
+                                       placeholder="输入电子邮箱..." aria-label="Enter Email"
+                                       aria-describedby="button-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary text-white" type="button" id="button-addon2">
+                                        订阅
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        {#                        <h2 class="footer-heading mb-4">Follow Us</h2>#}
+                        {#                        <a href="#about-section" class="smoothscroll pl-0 pr-3"><span class="icon-facebook"></span></a>#}
+                        {#                        <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>#}
+                        {#                        <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>#}
+                        {#                        <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>#}
+                    </form>
+                </div>
+            </div>
+            <div class="row pt-5 mt-5 text-center">
+                <div class="col-md-12">
+                    <div class="border-top pt-5">
+                        <p>
+                            <!-- Link back to cssmoban can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy; 2021/5/4 BFU
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+<script src="/static/js/jquery-3.3.1.min.js"></script>
+<script src="/static/js/popper.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<script src="/static/js/owl.carousel.min.js"></script>
+<script src="/static/js/jquery.sticky.js"></script>
+<script src="/static/js/jquery.waypoints.min.js"></script>
+<script src="/static/js/jquery.animateNumber.min.js"></script>
+<script src="/static/js/jquery.fancybox.min.js"></script>
+<script src="/static/js/jquery.easing.1.3.js"></script>
+<script src="/static/js/aos.js"></script>
+
+<script src="/static/js/main.js"></script>
+
+<!-- Bootstrap core JavaScript-->
+<script src="/static/vendor/jquery/jquery.min.js"></script>
+<script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="/static/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="/static/js/sb-admin-2.min.js"></script>
+
+
+</body>
+
+</html>
